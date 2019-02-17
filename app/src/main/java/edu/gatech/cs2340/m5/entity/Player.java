@@ -2,24 +2,19 @@ package edu.gatech.cs2340.m5.entity;
 
 public class Player {
     private String name;
-    private int userID;
+    private int difficulty;
+    private int pilotPoints;
+    private int fighterPoints;
+    private int traderPoints;
+    private int engineerPoints;
 
-    public Player(String name, int userID) {
+    public Player(String name, int difficulty) {
         this.name = name;
-        this.userID = userID;
+        this.difficulty = difficulty;
     }
 
     public Player() {
-        name = "No Name";
-        userID = -1;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setUserID(int userID) {
-        this.userID = userID;
+        this("No Name", -1);
     }
 
     public String getName() {
@@ -27,6 +22,6 @@ public class Player {
     }
 
     public int getUserID() {
-        return userID;
+        return difficulty;
     }
 }
