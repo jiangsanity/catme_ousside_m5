@@ -9,6 +9,176 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/engineerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <Button
+        android:id="@+id/engineerIncrementButton"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="176dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/traderView"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <Button
+        android:id="@+id/engineerDecrementButton"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/traderView"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <Button
+        android:id="@+id/traderIncrementButton"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="124dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/traderView"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <TextView
+        android:id="@+id/traderView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <Button
+        android:id="@+id/traderDecrementButton"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/traderView"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <Button
+        android:id="@+id/pilotIncrementButton"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="16dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/pilotView"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <Button
+        android:id="@+id/pilotDecrementButton"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/pilotView"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <Button
+        android:id="@+id/fighterIncrementButton"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="70dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/fighterView"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <TextView
+        android:id="@+id/fighterView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <Button
+        android:id="@+id/fighterDecrementButton"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/fighterView"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <TextView
+        android:id="@+id/pilotView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skillPointsLabel" />
+
+    <TextView
+        android:id="@+id/skillPointsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="16"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toEndOf="@+id/skillPointsLabel"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyView" />
+
+    <TextView
+        android:id="@+id/difficultyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginRight="120dp"
+        android:text="Normal"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+    <TextView
         android:id="@+id/difficultyLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -122,5 +292,41 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/engineerLabel" />
+
+    <Button
+        android:id="@+id/difficultyDecrementButton"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/difficultyView"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+    <Button
+        android:id="@+id/difficultyIncrementButton"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="18dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/difficultyView"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newPlayerTitle" />
 
 </android.support.constraint.ConstraintLayout>
