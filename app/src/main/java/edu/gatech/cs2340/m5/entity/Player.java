@@ -48,6 +48,7 @@ public class Player {
     }
 
     /**
+     * Getter method for player name
      *
      * @return the name of the player
      */
@@ -57,6 +58,7 @@ public class Player {
     }
 
     /**
+     * Getter method for game difficulty
      *
      * @return the chosen difficulty of the game
      */
@@ -66,6 +68,7 @@ public class Player {
     }
 
     /**
+     * Getter method for pilot points
      *
      * @return the number of points for pilot skill
      */
@@ -75,6 +78,7 @@ public class Player {
     }
 
     /**
+     * Getter method for fighter points
      *
      * @return the number of points for fighter skill
      */
@@ -84,6 +88,7 @@ public class Player {
     }
 
     /**
+     * Getter method for trader points
      *
      * @return the number of points for trader skill
      */
@@ -93,6 +98,7 @@ public class Player {
     }
 
     /**
+     * Getter method for engineering points
      *
      * @return the number of points for engineering skill
      */
@@ -102,6 +108,7 @@ public class Player {
     }
 
     /**
+     * Getter method for all points combined
      *
      * @return an array of the points for each skill
      */
@@ -111,6 +118,7 @@ public class Player {
     }
 
     /**
+     * Getter method for ship type
      *
      * @return the type of ship the player owns
      */
@@ -120,6 +128,7 @@ public class Player {
     }
 
     /**
+     * Setter method for player name
      *
      * @param name the player's name
      */
@@ -130,6 +139,7 @@ public class Player {
     }
 
     /**
+     * Setter method for game difficulty
      *
      * @param difficulty the game's difficulty
      */
@@ -139,6 +149,7 @@ public class Player {
     }
 
     /**
+     * Setter method for pilot points
      *
      * @param pilotPoints points dedicated to pilot skill
      */
@@ -148,6 +159,7 @@ public class Player {
     }
 
     /**
+     * Setter method for fighter points
      *
      * @param fighterPoints points dedicated to fighter skill
      */
@@ -157,6 +169,7 @@ public class Player {
     }
 
     /**
+     * Setter method for trader points
      *
      * @param traderPoints points dedicated to trader skill
      */
@@ -166,8 +179,9 @@ public class Player {
     }
 
     /**
-     * points dedicated to engineering skill
-     * @param engineerPoints
+     * Setter method for engineering points
+     *
+     * @param engineerPoints points dedicated to engineering skill
      */
 
     public void setEngineerPoints(int engineerPoints) {
@@ -175,6 +189,7 @@ public class Player {
     }
 
     /**
+     * Setter method for ship type
      *
      * @param ship type of ship the player owns
      */
