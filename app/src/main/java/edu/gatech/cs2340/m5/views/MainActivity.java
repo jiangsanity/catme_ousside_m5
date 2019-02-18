@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import edu.gatech.cs2340.m5.R;
 
@@ -23,8 +25,23 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Button doneButton = findViewById(R.id.newPlayerDoneButton);
+        EditText nameField = findViewById(R.id.nameField);
+        TextView skillPointsView = findViewById(R.id.skillPointsView);
+        TextView difficultyView = findViewById(R.id.difficultyView);
         Button difficultyDecrementButton = findViewById(R.id.difficultyDecrementButton);
         Button difficultyIncrementButton = findViewById(R.id.difficultyIncrementButton);
+        TextView pilotView = findViewById(R.id.pilotView);
+        Button pilotDecrementButton = findViewById(R.id.pilotDecrementButton);
+        Button pilotdifficultyIncrementButton = findViewById(R.id.pilotIncrementButton);
+        TextView fighterView = findViewById(R.id.fighterView);
+        Button fighterDecrementButton = findViewById(R.id.fighterDecrementButton);
+        Button fighterdifficultyIncrementButton = findViewById(R.id.fighterIncrementButton);
+        TextView traderView = findViewById(R.id.traderView);
+        Button traderDecrementButton = findViewById(R.id.traderDecrementButton);
+        Button traderdifficultyIncrementButton = findViewById(R.id.traderIncrementButton);
+        TextView engineerView = findViewById(R.id.engineerView);
+        Button engineerDecrementButton = findViewById(R.id.engineerDecrementButton);
+        Button engineerdifficultyIncrementButton = findViewById(R.id.engineerIncrementButton);
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
