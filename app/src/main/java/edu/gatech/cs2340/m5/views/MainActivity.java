@@ -16,10 +16,13 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 import edu.gatech.cs2340.m5.R;
+import edu.gatech.cs2340.m5.entity.Player;
 
 public class MainActivity extends AppCompatActivity {
 
     int difficulty;
+
+    Player player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,27 +34,34 @@ public class MainActivity extends AppCompatActivity {
         difficulty = 2;
 
         Button doneButton = findViewById(R.id.newPlayerDoneButton);
-        EditText nameField = findViewById(R.id.nameField);
+        final EditText nameField = findViewById(R.id.nameField);
         TextView skillPointsView = findViewById(R.id.skillPointsView);
         final TextView difficultyView = findViewById(R.id.difficultyView);
         Button difficultyDecrementButton = findViewById(R.id.difficultyDecrementButton);
         Button difficultyIncrementButton = findViewById(R.id.difficultyIncrementButton);
-        TextView pilotView = findViewById(R.id.pilotView);
+        final TextView pilotView = findViewById(R.id.pilotView);
         Button pilotDecrementButton = findViewById(R.id.pilotDecrementButton);
         Button pilotdifficultyIncrementButton = findViewById(R.id.pilotIncrementButton);
-        TextView fighterView = findViewById(R.id.fighterView);
+        final TextView fighterView = findViewById(R.id.fighterView);
         Button fighterDecrementButton = findViewById(R.id.fighterDecrementButton);
         Button fighterdifficultyIncrementButton = findViewById(R.id.fighterIncrementButton);
-        TextView traderView = findViewById(R.id.traderView);
+        final TextView traderView = findViewById(R.id.traderView);
         Button traderDecrementButton = findViewById(R.id.traderDecrementButton);
         Button traderdifficultyIncrementButton = findViewById(R.id.traderIncrementButton);
-        TextView engineerView = findViewById(R.id.engineerView);
+        final TextView engineerView = findViewById(R.id.engineerView);
         Button engineerDecrementButton = findViewById(R.id.engineerDecrementButton);
         Button engineerdifficultyIncrementButton = findViewById(R.id.engineerIncrementButton);
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Log.i("New Player", "new player");
+                player = new Player();
+                player.setName(nameField.getText().toString());
+                player.setDifficulty(difficulty);
+                player.setPilotPoints(Integer.parseInt(pilotView.getText().toString()));
+                player.setFighterPoints(Integer.parseInt(fighterView.getText().toString()));
+                player.setTraderPoints(Integer.parseInt(traderView.getText().toString()));
+                player.setEngineerPoints(Integer.parseInt(engineerView.getText().toString()));
             }
         });
 

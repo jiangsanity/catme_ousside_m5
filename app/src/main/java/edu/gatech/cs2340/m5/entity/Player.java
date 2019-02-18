@@ -36,6 +36,18 @@ public class Player {
     }
 
     /**
+     * Override toString method to output player attributes
+     *
+     * @return player attribute string
+     */
+    @Override
+    public String toString() {
+        return "Name: " + name + "\nDifficulty: " + difficulty + "\nPilot Points: " + pilotPoints
+                + "\nFighter Points: " + fighterPoints + "\nTrader Points: " + traderPoints
+                + "\nEngineer Points: " + engineerPoints;
+    }
+
+    /**
      *
      * @return the name of the player
      */
