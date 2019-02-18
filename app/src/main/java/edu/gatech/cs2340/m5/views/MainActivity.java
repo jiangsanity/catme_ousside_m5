@@ -21,6 +21,7 @@ import edu.gatech.cs2340.m5.entity.Player;
 public class MainActivity extends AppCompatActivity {
 
     int difficulty;
+    int pointsLeft;
 
     Player player;
 
@@ -32,29 +33,29 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         difficulty = 2;
+        pointsLeft = 16;
+
 
         Button doneButton = findViewById(R.id.newPlayerDoneButton);
         final EditText nameField = findViewById(R.id.nameField);
-        TextView skillPointsView = findViewById(R.id.skillPointsView);
         final TextView difficultyView = findViewById(R.id.difficultyView);
         Button difficultyDecrementButton = findViewById(R.id.difficultyDecrementButton);
         Button difficultyIncrementButton = findViewById(R.id.difficultyIncrementButton);
         final TextView pilotView = findViewById(R.id.pilotView);
         Button pilotDecrementButton = findViewById(R.id.pilotDecrementButton);
-        Button pilotdifficultyIncrementButton = findViewById(R.id.pilotIncrementButton);
         final TextView fighterView = findViewById(R.id.fighterView);
         Button fighterDecrementButton = findViewById(R.id.fighterDecrementButton);
-        Button fighterdifficultyIncrementButton = findViewById(R.id.fighterIncrementButton);
+        Button fighterIncrementButton = findViewById(R.id.fighterIncrementButton);
         final TextView traderView = findViewById(R.id.traderView);
         Button traderDecrementButton = findViewById(R.id.traderDecrementButton);
-        Button traderdifficultyIncrementButton = findViewById(R.id.traderIncrementButton);
+        Button pilotIncrementButton = findViewById(R.id.pilotIncrementButton);
+        Button traderIncrementButton = findViewById(R.id.traderIncrementButton);
         final TextView engineerView = findViewById(R.id.engineerView);
         Button engineerDecrementButton = findViewById(R.id.engineerDecrementButton);
-        Button engineerdifficultyIncrementButton = findViewById(R.id.engineerIncrementButton);
+        Button engineerIncrementButton = findViewById(R.id.engineerIncrementButton);
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Log.i("New Player", "new player");
                 player = new Player();
                 player.setName(nameField.getText().toString());
                 player.setDifficulty(difficulty);
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 player.setFighterPoints(Integer.parseInt(fighterView.getText().toString()));
                 player.setTraderPoints(Integer.parseInt(traderView.getText().toString()));
                 player.setEngineerPoints(Integer.parseInt(engineerView.getText().toString()));
+                Log.i("New Player", player.toString());
             }
         });
 
@@ -79,6 +81,74 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        pilotDecrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                incDecButtonPress(false, pilotView);
+            }
+        });
+        pilotIncrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                incDecButtonPress(true, pilotView);
+            }
+        });
+        fighterDecrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                incDecButtonPress(false, fighterView);
+            }
+        });
+        fighterIncrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                incDecButtonPress(true, fighterView);
+            }
+        });
+        traderDecrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                incDecButtonPress(false, traderView);
+            }
+        });
+        traderIncrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                incDecButtonPress(true, traderView);
+            }
+        });
+        engineerDecrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                incDecButtonPress(false, engineerView);
+            }
+        });
+        engineerIncrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                incDecButtonPress(true, engineerView);
+            }
+        });
+
+    }
+
+    private void incDecButtonPress (boolean isIncrement, TextView attribute) {
+        String value = attribute.getText().toString();
+        int finalValue = Integer.parseInt(value);
+        if (isIncrement) {
+            if (pointsLeft != 0) {
+                pointsLeft--;
+                finalValue++;
+            }
+        } else {
+            if (finalValue > 1) {
+                pointsLeft++;
+                finalValue--;
+            }
+        }
+        attribute.setText("" + finalValue);
+        TextView skillPointsView = findViewById(R.id.skillPointsView);
+        skillPointsView.setText("" + pointsLeft);
     }
 
     private void difficultySet(boolean isIncrement, TextView attribute) {
