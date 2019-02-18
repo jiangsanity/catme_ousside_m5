@@ -296,6 +296,17 @@
         app:layout_constraintTop_toBottomOf="@+id/engineerLabel" />
 
     <Button
+        android:id="@+id/ExitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Exit App"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newPlayerDoneButton" />
+
+    <Button
         android:id="@+id/difficultyDecrementButton"
         android:layout_width="40dp"
         android:layout_height="42dp"

@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button doneButton = findViewById(R.id.newPlayerDoneButton);
+        Button exitButton = findViewById(R.id.ExitButton);
         final EditText nameField = findViewById(R.id.nameField);
         final TextView difficultyView = findViewById(R.id.difficultyView);
         Button difficultyDecrementButton = findViewById(R.id.difficultyDecrementButton);
@@ -55,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
         final TextView engineerView = findViewById(R.id.engineerView);
         Button engineerDecrementButton = findViewById(R.id.engineerDecrementButton);
         Button engineerIncrementButton = findViewById(R.id.engineerIncrementButton);
+
+        exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                System.exit(0);
+            }
+        });
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
