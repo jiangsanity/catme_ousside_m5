@@ -168,13 +168,16 @@
         android:id="@+id/difficultyView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="Normal"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/difficultyIncrementButton"
+        app:layout_constraintStart_toEndOf="@+id/difficultyDecrementButton"
         app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
 
     <TextView
@@ -296,22 +299,22 @@
         android:id="@+id/difficultyDecrementButton"
         android:layout_width="40dp"
         android:layout_height="42dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="18dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:text="-"
-        app:layout_constraintEnd_toStartOf="@+id/difficultyView"
+        app:layout_constraintStart_toEndOf="@+id/difficultyLabel"
         app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
 
     <Button
         android:id="@+id/difficultyIncrementButton"
         android:layout_width="40dp"
         android:layout_height="42dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="18dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
         android:text="+"
-        app:layout_constraintStart_toEndOf="@+id/difficultyView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
 
     <EditText

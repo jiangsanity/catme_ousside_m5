@@ -13,9 +13,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import edu.gatech.cs2340.m5.R;
 
 public class MainActivity extends AppCompatActivity {
+
+    int difficulty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +28,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        difficulty = 2;
+
         Button doneButton = findViewById(R.id.newPlayerDoneButton);
         EditText nameField = findViewById(R.id.nameField);
         TextView skillPointsView = findViewById(R.id.skillPointsView);
-        TextView difficultyView = findViewById(R.id.difficultyView);
+        final TextView difficultyView = findViewById(R.id.difficultyView);
         Button difficultyDecrementButton = findViewById(R.id.difficultyDecrementButton);
         Button difficultyIncrementButton = findViewById(R.id.difficultyIncrementButton);
         TextView pilotView = findViewById(R.id.pilotView);
@@ -48,6 +54,46 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("New Player", "new player");
             }
         });
+
+        difficultyDecrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                difficultySet(false, difficultyView);
+            }
+        });
+
+        difficultyIncrementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                difficultySet(true, difficultyView);
+            }
+        });
+
+    }
+
+    private void difficultySet(boolean isIncrement, TextView attribute) {
+        if (isIncrement) {
+            if (difficulty < 4) {
+                difficulty++;
+            }
+        } else {
+            if (difficulty > 0) {
+                difficulty--;
+            }
+        }
+        String text = "";
+        if (difficulty == 0) {
+            text = "Beginner";
+        } else if (difficulty == 1) {
+            text = "Easy";
+        } else if (difficulty == 2) {
+            text = "Normal";
+        } else if (difficulty == 3) {
+            text = "Hard";
+        } else if (difficulty == 4) {
+            text = "Impossible";
+        }
+        attribute.setText(text);
     }
 
     @Override
